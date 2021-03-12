@@ -1,0 +1,16 @@
+Rewrite php.ini of homestead
+
+0. Vagrant up and ssh
+1. Check homestead php version 
+ vagrant@homestead:~$ php -v
+
+2.Find right php directory 
+ vagrant@homestead:~$ cd /etc/php
+ vagrant@homestead:/etc/php$ ls -l
+
+3. cd
+vagrant@homestead:~$ cd /etc/php/x.x/fpm
+
+4.Rewrite
+vagrant@homestead:~$ sudo chmod -R ugo+rw php.ini
+vagrant@homestead:~$ sudo vi php.ini
